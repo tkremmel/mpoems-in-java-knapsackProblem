@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tuwien.ifs.mpoems.knapsackProblem</groupId>
+  <artifactId>tuwien.ifs.mpoems.knapsackProblem</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>tuwien.ifs.mpoems.knapsackProblem</name>
+  <url>http://maven.apache.org</url>
+	<build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+    <plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/assembly-all.xml</descriptor>
+          </descriptors>
+        <archive>
+            <manifest>
+              <mainClass>tuwien.ifs.mpoems.knapsackProblem.testStarter</mainClass>
+            </manifest>
+          </archive>
+          </configuration>
+			</plugin>
+	 </plugins>
+  </build>
+  
+
+
+<dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>tuwien.ifs.mpoems</groupId>
+      <artifactId>tuwien.ifs.mpoems</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>tuwien.ifs.mpoems.analysis</groupId>
+      <artifactId>tuwien.ifs.mpoems.analysis</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+<repositories>
+		<repository>
+			<id>Codehaus Repository</id>
+			<url>http://repository.codehaus.org</url>
+		</repository>
+		<repository>
+			<id>Codehaus Dist</id>
+			<url>http://dist.codehaus.org</url>
+		</repository>
+		<repository>
+			<id>Codehaus Snapshots</id>
+			<url>http://snapshots.repository.codehaus.org</url>
+		</repository>
+		<repository>
+			<id>Julien Dubois</id>
+			<url>http://julien.dubois.free.fr/maven2/</url>
+		</repository>
+		<repository>
+			<id>apache.org</id>
+			<name>Maven Snapshots</name>
+			<url>http://people.apache.org/repo/m2-snapshot-repository</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>Codehaus Repository</id>
+			<url>http://repository.codehaus.org</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>Codehaus Dist</id>
+			<url>http://dist.codehaus.org</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>Codehaus Snapshots</id>
+			<url>http://snapshots.repository.codehaus.org</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>apache.org</id>
+			<name>Maven Plugin Snapshots</name>
+			<url>http://people.apache.org/repo/m2-snapshot-repository</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>
